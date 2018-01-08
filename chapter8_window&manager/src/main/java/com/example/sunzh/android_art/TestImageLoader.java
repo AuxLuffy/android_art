@@ -20,6 +20,7 @@ import java.util.List;
 
 public class TestImageLoader extends AppCompatActivity implements AbsListView.OnScrollListener {
     private static final String TAG = "TestImageLoader";
+//    private static Context context;
 
     private List<String> mUrList = new ArrayList<>();
     ImageLoader mImageLoader;
@@ -35,6 +36,7 @@ public class TestImageLoader extends AppCompatActivity implements AbsListView.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test_image_loader);
+//        context = this;
         initData();
         initView();
         mImageLoader = ImageLoader.build(this);

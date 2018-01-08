@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.btn :
+            case R.id.btn:
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && !Settings.canDrawOverlays(this)) {
                     Toast.makeText(MainActivity.this, "can not DrawOverlays", Toast.LENGTH_SHORT).show();
                     startActivityForResult(new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION, Uri.parse("package:" + getPackageName())), OVERLAY_PERM_REQ_CODE);
@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 break;
             case R.id.btn1:
-
+                startActivity(new Intent(this, TestImageLoader.class));
                 break;
         }
 
@@ -106,7 +106,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         return false;
     }
 
-    private AsyncTask downloadTask = new AsyncTask<URL,Integer,Long>(){
+    private AsyncTask downloadTask = new AsyncTask<URL, Integer, Long>() {
         @Override
         protected Long doInBackground(URL... urls) {
             return null;
